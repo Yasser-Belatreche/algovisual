@@ -1,0 +1,3 @@
+const ICONS = {};
+
+export { ICONS };
