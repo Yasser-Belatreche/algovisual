@@ -6,7 +6,7 @@ import styles from "./Home.module.scss";
 interface Props {}
 
 const Home: React.FC<Props> = () => {
-  return <div>Hello world</div>;
+  return <div className={styles.container}>Hello world</div>;
 };
 
 export { Home };
