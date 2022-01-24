@@ -1,4 +1,5 @@
 import React from "react";
+import { Layout } from "../../components/Layout/Layout";
 
 // styles
 import styles from "./Home.module.scss";
@@ -6,7 +7,11 @@ import styles from "./Home.module.scss";
 interface Props {}
 
 const Home: React.FC<Props> = () => {
-  return <div className={styles.container}>Hello world</div>;
+  return (
+    <Layout>
+      <div className={styles.container}>hello world</div>
+    </Layout>
+  );
 };
 
 export { Home };

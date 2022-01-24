@@ -1,0 +1,9 @@
+.navbar {
+  @apply sticky top-0 w-full bg-white;
+  height: 100px;
+
+  .navContainer {
+    @apply mx-auto h-full flex items-center justify-between;
+    max-width: 1300px;
+  }
+}
