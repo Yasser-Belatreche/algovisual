@@ -1,5 +1,7 @@
+import Logo from "../../../public/images/Logo.png";
+
 const IMAGES = {
-  regularLogo: "/images/Logo.png",
+  regularLogo: Logo,
 };
 
 export { IMAGES };

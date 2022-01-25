@@ -1,20 +1,23 @@
 import React from "react";
-import Image from "next/image";
-
-// utils
-import { IMAGES } from "../../../../utils/constants/Images";
 
 // styles
 import styles from "../../Layout.module.scss";
 
-interface Props {}
+// components
+import { Logo } from "./_components_/Logo";
+import { NavLinks } from "./_components_/NavLinks";
+
+export interface Props {}
 
 const Navbar: React.FC<Props> = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.navContainer}>
-        <div className={styles.logoContainer}>
-          <Image src={IMAGES.regularLogo} alt="Logo" layout="fill" />
+        <Logo />
+        <NavLinks />
+
+        <div className={styles.buttonContainer}>
+          <button>Contribute</button>
         </div>
       </div>
     </div>

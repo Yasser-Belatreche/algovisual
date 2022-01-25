@@ -3,7 +3,22 @@
   height: 100px;
 
   .navContainer {
-    @apply mx-auto h-full flex items-center justify-between;
+    @apply mx-auto px-8 h-full flex items-center justify-between;
     max-width: 1300px;
+
+    .logoContainer {
+      @apply flex items-center cursor-pointer;
+    }
+
+    .navLinks {
+      @apply flex items-center gap-4 capitalize;
+
+      .navLink {
+        @apply font-medium;
+
+        &.active {
+        }
+      }
+    }
   }
 }
