@@ -1,48 +1,29 @@
-import React from 'react';
-import './button.css';
+import React from "react";
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+import Image from "next/image";
+import classNames from "classnames/bind";
+
+// styles
+import styles from "./Button.module.css";
+
+const cx = classNames.bind(styles);
+
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  backgroundColor: "blue" | "orange";
+  icon: string;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const Button: React.FC<Props> = ({ children, onClick, icon, ...props }) => {
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
+    <button onClick={onClick} {...props}>
+      <p>{children}</p>
+      {icon && <Image src={icon} alt="button icon" />}
     </button>
   );
 };
+
+export { Button };

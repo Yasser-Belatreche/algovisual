@@ -1,0 +1,7 @@
+.buttonContainer {
+  @apply flex items-center justify-center gap-4 bg-blue;
+
+  &.bgOrange {
+    @apply bg-orange;
+  }
+}

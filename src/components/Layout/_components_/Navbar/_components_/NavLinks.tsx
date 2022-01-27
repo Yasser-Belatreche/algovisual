@@ -1,33 +1,34 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import classNames from "classnames/bind";
 
 // styles
 import styles from "../../../Layout.module.scss";
 
+const cx = classNames.bind(styles);
+
 const LINKS = [
   {
     title: "home",
-    href: "/",
+    path: "/",
   },
   {
     title: "algorithms",
-    href: "/algorithms",
+    path: "/algorithms",
   },
   {
     title: "data structures",
-    href: "/data-structures",
+    path: "/dataStructures",
   },
   {
     title: "about",
-    href: "/about",
+    path: "/about",
   },
 ];
 
 const NavLinks: React.FC = () => {
-  const router = useRouter();
-
-  console.log(router.asPath);
+  const { asPath: currentPath } = useRouter();
 
   return (
     <nav className={styles.navLinks}>
@@ -35,7 +36,7 @@ const NavLinks: React.FC = () => {
         <NavLink
           {...link}
           key={link.title}
-          isActive={link.href === router.asPath}
+          isActive={link.path === currentPath}
         />
       ))}
     </nav>
@@ -45,18 +46,15 @@ const NavLinks: React.FC = () => {
 interface NavLinkProps {
   isActive: boolean;
   title: string;
-  href: string;
+  path: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ isActive, href, title }) => {
-  const temp = ["navLink"];
-  if (isActive) temp.push("active");
-
-  const className = temp.map((el) => styles[el]).join(" ");
+const NavLink: React.FC<NavLinkProps> = ({ isActive, path, title }) => {
+  const className = cx("navLink", { active: isActive });
 
   return (
     <div className={className}>
-      <Link href={href} passHref>
+      <Link href={path} passHref>
         {title}
       </Link>
     </div>

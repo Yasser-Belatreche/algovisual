@@ -11,12 +11,19 @@
     }
 
     .navLinks {
-      @apply flex items-center gap-4 capitalize;
+      @apply flex items-center gap-6 capitalize;
 
       .navLink {
-        @apply font-medium;
+        @apply font-medium text-grey py-2;
 
         &.active {
+          @apply relative text-blackShade;
+
+          &::after {
+            @apply absolute bg-blue bottom-0 right-2/4 translate-x-2/4 h-0.5 w-3/4;
+            content: "";
+            max-width: 50px;
+          }
         }
       }
     }
