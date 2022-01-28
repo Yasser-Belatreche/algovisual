@@ -9,7 +9,7 @@ interface Props {}
 const Home: React.FC<Props> = () => {
   return (
     <Layout>
-      <div className={styles.container}>hello world</div>
+      <div className={styles.container}>Home</div>
     </Layout>
   );
 };

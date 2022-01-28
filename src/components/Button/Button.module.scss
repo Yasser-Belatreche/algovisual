@@ -1,7 +1,25 @@
 .buttonContainer {
-  @apply flex items-center justify-center gap-4 bg-blue;
+  @apply flex items-center justify-center gap-4 bg-blue text-white text-base font-bold px-10 py-4 capitalize duration-300;
+  border-radius: 10px;
+
+  &:hover {
+    @apply bg-blueHover;
+  }
 
   &.bgOrange {
     @apply bg-orange;
+
+    &:hover {
+      @apply bg-orangeHover;
+    }
+  }
+
+  &.full {
+    @apply w-full;
+  }
+
+  .iconContainer {
+    @apply flex items-center;
+    max-width: 28px;
   }
 }

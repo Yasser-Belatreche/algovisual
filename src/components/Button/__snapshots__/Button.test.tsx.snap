@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button compoenent should call the onClick handler when passed 1`] = `
+<div>
+  <button
+    class="buttonContainer undefined"
+  >
+    <p>
+      button
+    </p>
+  </button>
+</div>
+`;
+
+exports[`Button compoenent should have the full width when passing the full prop 1`] = `
+<div>
+  <button
+    class="buttonContainer full undefined"
+  >
+    <p>
+      button
+    </p>
+  </button>
+</div>
+`;
+
+exports[`Button compoenent should have the primary color by default 1`] = `
+<div>
+  <button
+    class="buttonContainer undefined"
+  >
+    <p>
+      button
+    </p>
+  </button>
+</div>
+`;
+
+exports[`Button compoenent should have the secondary color when passing the secondary prop 1`] = `
+<div>
+  <button
+    class="buttonContainer bgOrange undefined"
+  >
+    <p>
+      button
+    </p>
+  </button>
+</div>
+`;

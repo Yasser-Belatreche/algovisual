@@ -1,5 +1,5 @@
 .navbar {
-  @apply sticky top-0 w-full bg-white;
+  @apply sticky top-0 w-full bg-white z-10;
   height: 100px;
 
   .navContainer {
@@ -14,7 +14,7 @@
       @apply flex items-center gap-6 capitalize;
 
       .navLink {
-        @apply font-medium text-grey py-2;
+        @apply font-semibold text-grey py-2;
 
         &.active {
           @apply relative text-blackShade;
@@ -27,5 +27,66 @@
         }
       }
     }
+
+    .barsContainer {
+      @apply hidden;
+    }
   }
+
+  @media only screen and (max-width: 920px) {
+    height: 80px;
+
+    .navContainer {
+      @apply px-4;
+
+      .logoContainer {
+        width: 130px;
+      }
+
+      .navLinks {
+        @apply fixed left-full flex-col justify-center items-center bg-blueLighter;
+        border-radius: 15px;
+        width: 98%;
+        height: 96%;
+        top: 2%;
+        transition: left 0.3s ease;
+      }
+
+      .contributeButton {
+        @apply hidden;
+      }
+
+      .barsContainer {
+        @apply h-1/5 flex flex-col justify-between items-center cursor-pointer z-10;
+        width: 30px;
+
+        .bar {
+          @apply w-full bg-blackShade h-0.5 rounded-full;
+        }
+      }
+
+      &.open {
+        .navLinks {
+          left: 1%;
+        }
+      }
+    }
+  }
+}
+
+.creditContainer {
+  @apply flex items-center justify-center w-full bg-blueLighter py-4;
+
+  p {
+    @apply text-center capitalize;
+
+    span {
+      @apply text-blue font-semibold;
+    }
+  }
+}
+
+.contentContainer {
+  @apply mx-auto w-full px-2;
+  max-width: 1300px;
 }
