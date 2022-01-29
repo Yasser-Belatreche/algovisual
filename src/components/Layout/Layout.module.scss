@@ -57,17 +57,46 @@
       }
 
       .barsContainer {
-        @apply h-1/5 flex flex-col justify-between items-center cursor-pointer z-10;
-        width: 30px;
+        @apply h-1/4 flex flex-col justify-between items-end cursor-pointer z-10;
+        width: 22px;
 
         .bar {
-          @apply w-full bg-blackShade h-0.5 rounded-full;
+          @apply w-full bg-blackShade rounded-full;
+          transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          height: 3px;
+
+          &:nth-of-type(1) {
+            @apply w-3/6;
+          }
+
+          &:nth-of-type(3) {
+            @apply w-9/12;
+          }
         }
       }
 
       &.open {
         .navLinks {
           left: 1%;
+        }
+
+        .barsContainer {
+          .bar {
+            &:nth-of-type(1) {
+              transform-origin: bottom;
+              transform: translate(-10px, 4px) rotatez(45deg);
+            }
+
+            &:nth-of-type(2) {
+              transform-origin: top;
+              transform: rotatez(-45deg);
+            }
+
+            &:nth-of-type(3) {
+              transform-origin: bottom;
+              transform: rotatez(45deg) translate(-6px, -4px);
+            }
+          }
         }
       }
     }

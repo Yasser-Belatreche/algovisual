@@ -27,7 +27,6 @@ describe("Button compoenent", () => {
     const instance = render(<Button label="button" onClick={mockFn} />);
 
     const button = instance.getByRole("button");
-
     fireEvent["click"](button);
 
     expect(mockFn).toBeCalledTimes(1);

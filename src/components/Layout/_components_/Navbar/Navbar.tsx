@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import classNames from "classnames/bind";
 
 // styles
@@ -17,7 +17,9 @@ export interface Props {}
 const Navbar: React.FC<Props> = () => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
-  const toggleMenu = () => setIsMenuOpened(!isMenuOpened);
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpened((isOpen) => !isOpen);
+  }, []);
 
   return (
     <div className={styles.navbar}>
