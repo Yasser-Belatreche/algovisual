@@ -1,16 +1,24 @@
 import "../src/styles/globals.scss";
 
+import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as NextImage from "next/image";
-
-const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, "default", {
   configurable: true,
   value: (props) => <img {...props} />,
 });
 
+export const decorators = [withNextRouter()];
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  nextRouter: {
+    Provider: RouterContext.Provider,
+    path: "/",
+    asPath: "/",
+    query: {},
+    push() {},
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,

@@ -17,9 +17,7 @@ export interface Props {}
 const Navbar: React.FC<Props> = () => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpened((isOpen) => !isOpen);
-  }, []);
+  const toggleMenu = () => setIsMenuOpened(!isMenuOpened);
 
   return (
     <div className={styles.navbar}>

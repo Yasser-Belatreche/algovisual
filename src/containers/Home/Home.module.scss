@@ -1,0 +1,23 @@
+.hero {
+  @apply flex items-start justify-between;
+
+  .headersContainer {
+    @apply flex flex-1 flex-col self-start pt-24 gap-10;
+
+    h1 {
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .desc {
+      @apply text-grey w-10/12;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .picContainer {
+    @apply flex-1;
+  }
+}

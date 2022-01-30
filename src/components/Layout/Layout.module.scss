@@ -3,7 +3,7 @@
   height: 100px;
 
   .navContainer {
-    @apply mx-auto px-8 h-full flex items-center justify-between;
+    @apply mx-auto px-2 h-full flex items-center justify-between;
     max-width: 1300px;
 
     .logoContainer {
@@ -84,7 +84,7 @@
           .bar {
             &:nth-of-type(1) {
               transform-origin: bottom;
-              transform: translate(-10px, 4px) rotatez(45deg);
+              transform: translate(-9px, 4px) rotatez(45deg);
             }
 
             &:nth-of-type(2) {
@@ -94,7 +94,7 @@
 
             &:nth-of-type(3) {
               transform-origin: bottom;
-              transform: rotatez(45deg) translate(-6px, -4px);
+              transform: rotatez(45deg) translate(-6px, -4.5px);
             }
           }
         }

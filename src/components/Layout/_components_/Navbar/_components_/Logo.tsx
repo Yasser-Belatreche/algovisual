@@ -12,7 +12,7 @@ const Logo = () => {
   return (
     <Link href={"/"} passHref>
       <div className={styles.logoContainer}>
-        <Image src={IMAGES.regularLogo} alt="Logo" placeholder="blur" />
+        <Image src={IMAGES.logo} alt="Logo" placeholder="blur" />
       </div>
     </Link>
   );
