@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 
 // styles
@@ -15,12 +15,23 @@ const cx = classNames.bind(styles);
 export interface Props {}
 
 const Navbar: React.FC<Props> = () => {
+  const [withBorder, setWithBorder] = useState<boolean>(false);
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
   const toggleMenu = () => setIsMenuOpened(!isMenuOpened);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) setWithBorder(true);
+      else setWithBorder(false);
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className={styles.navbar}>
+    <div className={cx("navbar", { withBorder })}>
       <div className={cx("navContainer", { open: isMenuOpened })}>
         <Logo />
         <NavLinks />

@@ -8,8 +8,6 @@ Object.defineProperty(NextImage, "default", {
   value: (props) => <img {...props} />,
 });
 
-export const decorators = [withNextRouter()];
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   nextRouter: {

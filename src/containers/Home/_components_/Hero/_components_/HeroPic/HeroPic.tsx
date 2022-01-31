@@ -10,7 +10,11 @@ import { IMAGES } from "../../../../../../utils/constants/Images";
 const HeroPic: React.FC = () => {
   return (
     <div className={styles.picContainer}>
-      <Image src={IMAGES.heroImage} alt="person hold a flag" />
+      <Image
+        src={IMAGES.heroImage}
+        alt="person hold a flag"
+        placeholder="blur"
+      />
     </div>
   );
 };

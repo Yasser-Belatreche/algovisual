@@ -1,5 +1,5 @@
 .hero {
-  @apply flex items-start justify-between;
+  @apply flex items-center justify-between pb-24;
 
   .headersContainer {
     @apply flex flex-1 flex-col self-start pt-24 gap-10;
@@ -15,9 +15,53 @@
       font-size: 22px;
       letter-spacing: -0.5px;
     }
+
+    .buttonsContainer {
+      @apply flex gap-10 items-center;
+
+      .iconButton {
+        @apply rounded-full p-4 flex h-full items-center justify-center border border-greyLight;
+      }
+    }
   }
 
   .picContainer {
     @apply flex-1;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .headersContainer {
+      h1 {
+        span {
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 920px) {
+    @apply flex-col-reverse;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .headersContainer {
+      @apply gap-4 py-4;
+      .desc {
+        letter-spacing: normal;
+        font-size: 18px;
+      }
+
+      .buttonsContainer {
+        @apply flex gap-4 items-center mt-4;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .headersContainer {
+      .desc {
+        font-size: 14px;
+      }
+    }
   }
 }

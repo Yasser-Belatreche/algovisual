@@ -10,11 +10,16 @@ interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
   color?: "black" | "white";
 }
 
-const HeroTitle: React.FC<Props> = ({ children, color, ...props }) => {
+const HeroTitle: React.FC<Props> = ({
+  children,
+  color,
+  className: classFromProps,
+  ...props
+}) => {
   const className = cx("title", { white: color == "white" });
 
   return (
-    <h1 className={`${className} ${props.className}`} {...props}>
+    <h1 className={`${className} ${classFromProps}`} {...props}>
       {children}
     </h1>
   );

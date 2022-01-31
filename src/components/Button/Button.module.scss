@@ -1,6 +1,7 @@
 .buttonContainer {
-  @apply flex items-center justify-center gap-4 bg-blue text-white text-base font-bold px-10 py-4 capitalize duration-300;
+  @apply flex items-center justify-center gap-4 bg-blue text-white text-lg font-bold px-12 py-4 capitalize duration-300;
   border-radius: 10px;
+  white-space: nowrap;
 
   &:hover {
     @apply bg-blueHover;
@@ -21,5 +22,9 @@
   .iconContainer {
     @apply flex items-center;
     max-width: 28px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    @apply w-full text-base px-0;
   }
 }

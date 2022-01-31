@@ -32,4 +32,16 @@ describe("Button compoenent", () => {
     expect(mockFn).toBeCalledTimes(1);
     expect(instance.container).toMatchSnapshot();
   });
+
+  it("should add the class passed to props to the class list", () => {
+    const instance = render(
+      <Button label="button" className="myCustomClass" />
+    );
+
+    const button = instance.getByRole("button");
+
+    expect(button.classList.length).not.toEqual(1);
+    expect(button.classList).toContain("myCustomClass");
+    expect(instance.container).toMatchSnapshot();
+  });
 });

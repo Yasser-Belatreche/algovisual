@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button compoenent should add the class passed to props to the class list 1`] = `
+<div>
+  <button
+    class="buttonContainer myCustomClass"
+  >
+    <p>
+      button
+    </p>
+  </button>
+</div>
+`;
+
 exports[`Button compoenent should call the onClick handler when passed 1`] = `
 <div>
   <button

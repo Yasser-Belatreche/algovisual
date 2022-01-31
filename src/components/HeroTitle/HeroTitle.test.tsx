@@ -14,4 +14,16 @@ describe("Button compoenent", () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it("should add the class passed to props to the class list", () => {
+    const instance = render(
+      <HeroTitle className="myCustomClass">My title</HeroTitle>
+    );
+
+    const header = instance.getByRole("heading");
+
+    expect(header.classList.length).not.toEqual(1);
+    expect(header.classList).toContain("myCustomClass");
+    expect(instance.container).toMatchSnapshot();
+  });
 });

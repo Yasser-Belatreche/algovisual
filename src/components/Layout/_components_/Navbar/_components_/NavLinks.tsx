@@ -6,26 +6,10 @@ import classNames from "classnames/bind";
 // styles
 import styles from "../../../Layout.module.scss";
 
-const cx = classNames.bind(styles);
+// utils
+import { LINKS } from "../_utils_/data";
 
-const LINKS = [
-  {
-    title: "home",
-    path: "/",
-  },
-  {
-    title: "algorithms",
-    path: "/algorithms",
-  },
-  {
-    title: "data structures",
-    path: "/dataStructures",
-  },
-  {
-    title: "about",
-    path: "/about",
-  },
-];
+const cx = classNames.bind(styles);
 
 const NavLinks: React.FC = () => {
   const { asPath: currentPath } = useRouter();

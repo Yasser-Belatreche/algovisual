@@ -19,12 +19,13 @@ const Button: React.FC<Props> = ({
   icon,
   secondary,
   full,
+  className: classFromProps,
   ...props
 }) => {
   const className = cx("buttonContainer", { bgOrange: secondary }, { full });
 
   return (
-    <button className={`${className} ${props.className}`} {...props}>
+    <button className={`${className} ${classFromProps}`} {...props}>
       <p>{label}</p>
       <Icon icon={icon} />
     </button>
