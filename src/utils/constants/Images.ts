@@ -6,6 +6,7 @@ import heroImage from "../../../public/images/hero-image.png";
 import chart from "../../../public/images/Chart.png";
 import screen from "../../../public/images/screen.png";
 import tasks from "../../../public/images/tasks.png";
+import sorting from "../../../public/images/sorting-image.png";
 
 const IMAGES = {
   logo,
@@ -16,6 +17,7 @@ const IMAGES = {
   chart,
   screen,
   tasks,
+  sorting,
 };
 
 export { IMAGES };

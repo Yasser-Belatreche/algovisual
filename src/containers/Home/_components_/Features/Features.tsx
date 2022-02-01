@@ -2,8 +2,12 @@ import React from "react";
 
 // styles
 import styles from "../../Home.module.scss";
-import { Feature } from "./_components_/Feature";
+
+// utils
 import { FEATURES } from "./_utils_/data";
+
+// components
+import { Feature } from "./_components_/Feature";
 
 const Features: React.FC = () => {
   return (

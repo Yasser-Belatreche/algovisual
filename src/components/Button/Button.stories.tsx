@@ -7,13 +7,15 @@ import { ICONS } from "../../utils/constants/Icons";
 export default {
   title: "Global/Button",
   component: Button,
-  argTypes: {},
+  argTypes: {
+    onClick: { action: "clicked" },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { label: "start learning", onClick: () => console.log("click") };
+Primary.args = { label: "start learning" };
 
 export const Secondary = Template.bind({});
 Secondary.args = {

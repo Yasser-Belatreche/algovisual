@@ -7,7 +7,7 @@ import classNames from "classnames/bind";
 import styles from "../../../Layout.module.scss";
 
 // utils
-import { LINKS } from "../_utils_/data";
+import { LINKS } from "../_utils_/Links";
 
 const cx = classNames.bind(styles);
 

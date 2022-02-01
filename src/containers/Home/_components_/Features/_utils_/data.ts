@@ -5,7 +5,7 @@ const FEATURES = [
     image: IMAGES.tasks,
     title: "detailed explanation",
     description:
-      "Instructions about how the algorithm works, along with other resources to learn more.",
+      "Instructions about how the algorithm works, along with resources to learn more.",
   },
   {
     image: IMAGES.chart,

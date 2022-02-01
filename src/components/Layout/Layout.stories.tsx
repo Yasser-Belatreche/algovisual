@@ -10,9 +10,7 @@ export default {
 } as ComponentMeta<typeof Layout>;
 
 const Template: ComponentStory<typeof Layout> = (args) => (
-  <Layout {...args}>
-    <div className="h-screen w-screen"> [content] </div>
-  </Layout>
+  <Layout {...args}></Layout>
 );
 
 export const GlobalLayout = Template.bind({});

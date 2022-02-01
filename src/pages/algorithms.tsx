@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Layout } from "../components/Layout/Layout";
+import { Algorithms as AlgorithmsPage } from "../containers/Algorithms/Algorithms";
 
 const Algorithms: NextPage = () => {
-  return <Layout>Algorithms</Layout>;
+  return <AlgorithmsPage />;
 };
 
 export default Algorithms;

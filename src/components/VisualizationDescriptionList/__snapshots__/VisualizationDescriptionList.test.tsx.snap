@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisulizationDescriptionList compoenent The text in the first element should be on the left side, when passing 'left' as value of the prop firstItemTextPosition 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="descriptionItem reverse"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+    <div
+      class="descriptionItem"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+    <div
+      class="descriptionItem reverse"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VisulizationDescriptionList compoenent should render a list of VisulizatoinDescriptions, by default the text in the first element is on the right side 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="descriptionItem"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+    <div
+      class="descriptionItem reverse"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+    <div
+      class="descriptionItem"
+    >
+      <div
+        class="picContainer"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="text"
+      >
+        <h2>
+           
+          Sorting Algorithms
+        </h2>
+        <p
+          class="desc"
+        >
+          Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...
+        </p>
+        <a
+          href="/visulizations/sorting"
+        >
+          See Visualization
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

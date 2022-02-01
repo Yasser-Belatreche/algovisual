@@ -50,6 +50,7 @@
   @media only screen and (max-width: 800px) {
     .headersContainer {
       @apply gap-4 py-4;
+
       .desc {
         letter-spacing: normal;
         font-size: 18px;
@@ -74,7 +75,7 @@
   @apply relative py-12 flex items-end justify-between flex-wrap;
 
   &::after {
-    @apply w-screen bg-blue  h-full top-2/4 left-2/4  absolute;
+    @apply w-screen bg-blue h-full top-2/4 left-2/4  absolute;
     content: "";
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -127,5 +128,13 @@
         @apply whitespace-normal;
       }
     }
+  }
+}
+
+.visulizationsSuggestions {
+  @apply py-32;
+
+  @media only screen and (max-width: 800px) {
+    @apply py-20;
   }
 }
