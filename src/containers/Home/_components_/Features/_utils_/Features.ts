@@ -9,9 +9,9 @@ const FEATURES = [
   },
   {
     image: IMAGES.chart,
-    title: "comprehensive visalization",
+    title: "comprehensive visualization",
     description:
-      "Interactive and smoth visulization with the ability to change the parameters.",
+      "Interactive and smoth visualization with the ability to change the parameters.",
   },
   {
     image: IMAGES.screen,

@@ -10,7 +10,9 @@ export default {
 } as ComponentMeta<typeof Layout>;
 
 const Template: ComponentStory<typeof Layout> = (args) => (
-  <Layout {...args}></Layout>
+  <Layout {...args}>
+    <div style={{ padding: "100px", textAlign: "center" }}>some content</div>
+  </Layout>
 );
 
 export const GlobalLayout = Template.bind({});

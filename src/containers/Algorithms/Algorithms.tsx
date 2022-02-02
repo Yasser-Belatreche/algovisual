@@ -9,7 +9,11 @@ import { Layout } from "../../components/Layout/Layout";
 interface Props {}
 
 const Algorithms: React.FC<Props> = () => {
-  return <Layout>Algorithms</Layout>;
+  return (
+    <Layout>
+      <div></div>
+    </Layout>
+  );
 };
 
 export { Algorithms };

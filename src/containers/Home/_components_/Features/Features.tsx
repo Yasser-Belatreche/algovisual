@@ -4,18 +4,19 @@ import React from "react";
 import styles from "../../Home.module.scss";
 
 // utils
-import { FEATURES } from "./_utils_/data";
+import { FEATURES } from "./_utils_/Features";
 
 // components
 import { Feature } from "./_components_/Feature";
+import { BlueBackground } from "../../../../components/BlueBackground/BlueBackground";
 
 const Features: React.FC = () => {
   return (
-    <div className={styles.features}>
+    <BlueBackground className={styles.features}>
       {FEATURES.map((feature) => (
         <Feature {...feature} key={feature.title} />
       ))}
-    </div>
+    </BlueBackground>
   );
 };
 

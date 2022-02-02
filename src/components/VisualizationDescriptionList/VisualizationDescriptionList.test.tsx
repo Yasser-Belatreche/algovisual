@@ -47,4 +47,21 @@ describe("VisulizationDescriptionList compoenent", () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it("the container should have the class 'containerClass' from the props", () => {
+    const instance = render(
+      <VisualizationDescriptionList
+        listItems={items}
+        firstItemTextPosition="left"
+        containerClass="someClass"
+      />
+    );
+
+    const container = instance.getByRole("listContainer");
+
+    expect(container.classList.length).toEqual(2);
+    expect(container.classList).toContain("someClass");
+
+    expect(instance.container).toMatchSnapshot();
+  });
 });

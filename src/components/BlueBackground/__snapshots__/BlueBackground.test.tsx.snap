@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlueBackground component should render a blue background that take the full screen with around his children 1`] = `
+<div>
+  <div
+    class="container undefined"
+    role="container"
+  >
+    Some children
+  </div>
+</div>
+`;
+
+exports[`BlueBackground component the container div should have the props passed to the component 1`] = `
+<div>
+  <div
+    class="container someClass"
+    role="container"
+  />
+</div>
+`;

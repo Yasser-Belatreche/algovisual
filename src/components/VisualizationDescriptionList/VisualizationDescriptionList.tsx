@@ -16,11 +16,13 @@ export type Item = {
 interface Props {
   listItems: Item[];
   firstItemTextPosition: "left" | "right";
+  containerClass?: string;
 }
 
 const VisualizationDescriptionList: React.FC<Props> = ({
   listItems,
   firstItemTextPosition,
+  containerClass,
 }) => {
   const offset = useRef<number>(1);
 
@@ -28,7 +30,10 @@ const VisualizationDescriptionList: React.FC<Props> = ({
   else offset.current = 1;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${containerClass}`}
+      role="listContainer"
+    >
       {listItems.map((item, index) => {
         const isReversed = (index + offset.current) % 2 === 0;
 

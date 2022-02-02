@@ -1,0 +1,10 @@
+.container {
+  @apply relative;
+
+  &::after {
+    @apply w-screen bg-blue h-full top-2/4 left-2/4  absolute;
+    content: "";
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}

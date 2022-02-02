@@ -72,14 +72,7 @@
 }
 
 .features {
-  @apply relative py-12 flex items-end justify-between flex-wrap;
-
-  &::after {
-    @apply w-screen bg-blue h-full top-2/4 left-2/4  absolute;
-    content: "";
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
+  @apply py-12 flex items-end justify-between flex-wrap;
 
   .feature {
     @apply flex text-center flex-col items-center justify-between gap-6;

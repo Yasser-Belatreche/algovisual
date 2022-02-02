@@ -22,7 +22,7 @@ const Button: React.FC<Props> = ({
   className: classFromProps,
   ...props
 }) => {
-  const className = cx("buttonContainer", { bgOrange: secondary }, { full });
+  const className = cx("buttonContainer", { bgOrange: secondary, full });
 
   return (
     <button className={`${className} ${classFromProps}`} {...props}>
