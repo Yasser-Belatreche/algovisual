@@ -15,5 +15,10 @@ const Template: ComponentStory<typeof Layout> = (args) => (
   </Layout>
 );
 
-export const GlobalLayout = Template.bind({});
-GlobalLayout.args = {};
+export const LayoutDefault = Template.bind({});
+LayoutDefault.args = {};
+
+export const NavbarColorsReversedLayout = Template.bind({});
+NavbarColorsReversedLayout.args = {
+  navbarReversed: true,
+};

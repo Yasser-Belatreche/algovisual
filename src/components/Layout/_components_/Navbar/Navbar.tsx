@@ -12,28 +12,36 @@ import { ToggleMenuBars } from "./_components_/ToggleMenuBars";
 
 const cx = classNames.bind(styles);
 
-export interface Props {}
+interface Props {
+  reverseColors: boolean;
+}
 
-const Navbar: React.FC<Props> = () => {
+const Navbar: React.FC<Props> = ({ reverseColors }) => {
   const [withBorder, setWithBorder] = useState<boolean>(false);
-  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
+  const [colorsReversed, setColorsReversed] = useState<boolean>(reverseColors);
 
+  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
   const toggleMenu = () => setIsMenuOpened(!isMenuOpened);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) setWithBorder(true);
-      else setWithBorder(false);
+      if (window.scrollY > 200) {
+        setWithBorder(true);
+        setColorsReversed(false);
+      } else {
+        setWithBorder(false);
+        reverseColors && setColorsReversed(true);
+      }
     };
 
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [reverseColors]);
 
   return (
-    <div className={cx("navbar", { withBorder })}>
+    <div className={cx("navbar", { withBorder, colorsReversed })}>
       <div className={cx("navContainer", { open: isMenuOpened })}>
-        <Logo />
+        <Logo colorsReversed={colorsReversed} />
         <NavLinks />
         <ContributeButton />
         <ToggleMenuBars onClick={toggleMenu} />

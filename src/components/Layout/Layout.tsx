@@ -7,12 +7,14 @@ import styles from "./Layout.module.scss";
 import { Navbar } from "./_components_/Navbar/Navbar";
 import { Credit } from "./_components_/Credit/Credit";
 
-interface Props {}
+interface Props {
+  navbarReversed?: boolean;
+}
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, navbarReversed = false }) => {
   return (
     <>
-      <Navbar />
+      <Navbar reverseColors={navbarReversed} />
       <main className={styles.contentContainer}>{children}</main>
       <Credit />
     </>

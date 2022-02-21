@@ -6,6 +6,26 @@
     @apply border-greyLight;
   }
 
+  &.colorsReversed {
+    @apply bg-transparent;
+
+    .navContainer {
+      .navLinks {
+        .navLink {
+          color: rgba(255, 255, 255, 0.58);
+
+          &.active {
+            @apply text-white;
+
+            &::after {
+              @apply bg-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .navContainer {
     @apply mx-auto px-2 h-full flex items-center justify-between;
     max-width: 1300px;
@@ -82,6 +102,18 @@
       &.open {
         .navLinks {
           left: 1%;
+
+          .navLink {
+            @apply font-semibold text-grey py-2;
+
+            &.active {
+              @apply relative text-blackShade;
+
+              &::after {
+                @apply bg-blue;
+              }
+            }
+          }
         }
 
         .barsContainer {

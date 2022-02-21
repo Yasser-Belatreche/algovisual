@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader Component should render correctly 1`] = `
+<div>
+  <div
+    class="container container"
+    role="container"
+  >
+    <h1
+      class="title white undefined"
+    >
+      Algorithms
+    </h1>
+    <img
+      alt=""
+      layout="fill"
+      objectfit="cover"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;

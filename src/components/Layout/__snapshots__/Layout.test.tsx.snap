@@ -1,5 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Layout Component shoudl be able to reverse the navbar colors 1`] = `
+<div>
+  <div
+    class="navbar colorsReversed"
+  >
+    <div
+      class="navContainer"
+    >
+      <div
+        class="logoContainer"
+        href="/"
+      >
+        <img
+          alt=""
+          placeholder="blur"
+          src="test-file-stub"
+        />
+      </div>
+      <nav
+        class="navLinks"
+      >
+        <div
+          class="navLink active"
+        >
+          <a
+            href="/"
+          >
+            home
+          </a>
+        </div>
+        <div
+          class="navLink"
+        >
+          <a
+            href="/algorithms"
+          >
+            algorithms
+          </a>
+        </div>
+        <div
+          class="navLink"
+        >
+          <a
+            href="/dataStructures"
+          >
+            data structures
+          </a>
+        </div>
+        <div
+          class="navLink"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </div>
+      </nav>
+      <a
+        class="contributeButton"
+        href="https://github.com/Yasser-Belatreche/algovisual"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <button
+          class="buttonContainer bgOrange undefined"
+        >
+          <p>
+            contribute
+          </p>
+          <div
+            class="iconContainer"
+          >
+            <img
+              alt=""
+              src="test-file-stub"
+            />
+          </div>
+        </button>
+      </a>
+      <div
+        class="barsContainer"
+      >
+        <span
+          class="bar"
+        />
+        <span
+          class="bar"
+        />
+        <span
+          class="bar"
+        />
+      </div>
+    </div>
+  </div>
+  <main
+    class="contentContainer"
+  />
+  <div
+    class="creditContainer"
+  >
+    <p>
+      made with ❤️ by
+       
+      <span>
+        <a
+          href="https://www.linkedin.com/in/yasser-belatreche-6b450620a/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          yasser
+        </a>
+      </span>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Layout Component should render correctly 1`] = `
 <div>
   <div

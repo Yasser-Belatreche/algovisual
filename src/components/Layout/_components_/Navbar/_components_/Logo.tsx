@@ -8,11 +8,19 @@ import { IMAGES } from "../../../../../utils/constants/Images";
 // styles
 import styles from "../../../Layout.module.scss";
 
-const Logo = () => {
+interface Props {
+  colorsReversed: boolean;
+}
+
+const Logo: React.FC<Props> = ({ colorsReversed }) => {
   return (
     <Link href={"/"} passHref>
       <div className={styles.logoContainer}>
-        <Image src={IMAGES.logo} alt="Logo" placeholder="blur" />
+        <Image
+          src={colorsReversed ? IMAGES.logoWhite : IMAGES.logo}
+          alt="Logo"
+          placeholder="blur"
+        />
       </div>
     </Link>
   );
