@@ -10,6 +10,10 @@ import { NavLinks } from "./_components_/NavLinks";
 import { ContributeButton } from "./_components_/ContributeButton";
 import { ToggleMenuBars } from "./_components_/ToggleMenuBars";
 
+// hooks
+import { useResponsiveMenu } from "./_hooks_/useResponsiveMenu";
+import { useNavbarState } from "./_hooks_/useNavbarState";
+
 const cx = classNames.bind(styles);
 
 interface Props {
@@ -17,26 +21,8 @@ interface Props {
 }
 
 const Navbar: React.FC<Props> = ({ reverseColors }) => {
-  const [withBorder, setWithBorder] = useState<boolean>(false);
-  const [colorsReversed, setColorsReversed] = useState<boolean>(reverseColors);
-
-  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
-  const toggleMenu = () => setIsMenuOpened(!isMenuOpened);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setWithBorder(true);
-        setColorsReversed(false);
-      } else {
-        setWithBorder(false);
-        reverseColors && setColorsReversed(true);
-      }
-    };
-
-    document.addEventListener("scroll", handleScroll);
-    return () => document.removeEventListener("scroll", handleScroll);
-  }, [reverseColors]);
+  const { toggleMenu, isMenuOpened } = useResponsiveMenu();
+  const { colorsReversed, withBorder } = useNavbarState({ reverseColors });
 
   return (
     <div className={cx("navbar", { withBorder, colorsReversed })}>
