@@ -13,7 +13,10 @@ interface Props {}
 const About: React.FC<Props> = () => {
   return (
     <Layout navbarReversed>
-      <PageHeader title="About" backgroundImage={IMAGES.aboutHeaderBg} />
+      <PageHeader
+        title="About Algovisual"
+        backgroundImage={IMAGES.aboutHeaderBg}
+      />
     </Layout>
   );
 };

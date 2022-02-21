@@ -3,6 +3,11 @@
   top: -101px;
 
   @media only screen and (max-width: 920px) {
+    @apply py-20 pt-28;
     top: -81px;
+
+    img {
+      display: none !important;
+    }
   }
 }
