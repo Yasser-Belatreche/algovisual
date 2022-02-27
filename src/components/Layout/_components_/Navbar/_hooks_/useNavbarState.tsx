@@ -15,7 +15,7 @@ const useNavbarState = ({ reverseColors }: Params) => {
         setColorsReversed(false);
       } else {
         setWithBorder(false);
-        reverseColors && setColorsReversed(true);
+        setColorsReversed(reverseColors);
       }
     };
 
