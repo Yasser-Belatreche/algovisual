@@ -7,7 +7,7 @@ const SUGGESTIONS: Item[] = [
     description:
       "Explore how the most famous sorting algorithms works, we've included Bubble Sort, Merge Sort, Insertion Sort and more...",
     image: IMAGES.sorting,
-    pageLink: "/visulizations/sorting",
+    pageLink: "/visualizations/sorting",
   },
 ];
 

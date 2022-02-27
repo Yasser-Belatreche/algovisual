@@ -1,0 +1,48 @@
+.navbar {
+  @apply sticky top-0 w-full bg-white z-10 border-b border-greyLight duration-300;
+  height: 80px;
+
+  .container {
+    @apply mx-auto flex items-center justify-between px-2 h-full;
+    max-width: 1300px;
+
+    .logoAndTags {
+      @apply flex items-center gap-14;
+
+      .logoContainer {
+        @apply cursor-pointer flex items-center;
+      }
+
+      .tagsContainer {
+        @apply flex items-center justify-start gap-3;
+
+        .tag {
+          @apply capitalize font-semibold flex items-center gap-3;
+        }
+      }
+    }
+
+    .seeCodeContainer {
+      @apply flex items-center justify-center cursor-pointer;
+    }
+
+    @media only screen and (max-width: 920px) {
+      @apply px-4;
+
+      .logoAndTags {
+        .logoContainer {
+          width: 160px;
+        }
+
+        .tagsContainer {
+          @apply hidden;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  @apply relative px-2 bg-blueBg w-full flex items-center justify-center;
+  height: calc(100vh - 100px);
+}

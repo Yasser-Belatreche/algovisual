@@ -20,8 +20,12 @@ const Buttons: React.FC = () => {
 };
 
 const IconButton: React.FC = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: window.innerHeight * 2, behavior: "smooth" });
+  };
+
   return (
-    <button className={styles.iconButton}>
+    <button className={styles.iconButton} onClick={handleClick}>
       <Image src={ICONS.arrowDown} alt="arrow down" />
     </button>
   );

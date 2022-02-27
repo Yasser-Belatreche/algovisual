@@ -16,6 +16,7 @@ module.exports = {
       blueHover: "#4f4fc4",
       blueLight: "#7191E2",
       blueLighter: "#F5F5F5",
+      blueBg: "#FFF5FE",
       grey: "#696871",
       greyLight: "#E7E7E7",
       green: "#4BD350",

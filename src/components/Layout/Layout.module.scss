@@ -23,6 +23,12 @@
           }
         }
       }
+
+      .barsContainer {
+        .bar {
+          @apply bg-white;
+        }
+      }
     }
   }
 
@@ -118,6 +124,8 @@
 
         .barsContainer {
           .bar {
+            @apply bg-blackShade;
+
             &:nth-of-type(1) {
               transform-origin: bottom;
               transform: translate(-9px, 4px) rotatez(45deg);
