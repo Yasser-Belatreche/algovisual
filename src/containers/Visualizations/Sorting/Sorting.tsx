@@ -4,7 +4,7 @@ import { VisualizationLayout } from "./_components_/VisualizationLayout/Visualiz
 interface Props {}
 
 const Sorting: React.FC<Props> = () => {
-  return <VisualizationLayout>Sorting</VisualizationLayout>;
+  return <VisualizationLayout></VisualizationLayout>;
 };
 
 export { Sorting };

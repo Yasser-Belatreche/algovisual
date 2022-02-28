@@ -44,5 +44,89 @@
 
 .content {
   @apply relative px-2 bg-blueBg w-full flex items-center justify-center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
+
+  .controlButtonsContainer {
+    @apply absolute bottom-8 right-1/2 translate-x-2/4 flex items-center flex-col gap-5;
+
+    .buttonsContainer {
+      @apply flex items-center justify-center gap-6;
+
+      .playButtonContainer {
+        @apply rounded-full bg-blue flex items-center justify-center cursor-pointer duration-300;
+        width: 60px;
+        height: 60px;
+        padding: unset;
+
+        &:hover {
+          @apply bg-blueHover;
+        }
+
+        & > span {
+          @apply relative left-0.5;
+        }
+      }
+
+      .prevNextButtonContainer {
+        @apply cursor-pointer;
+      }
+    }
+
+    .progressBarContainer {
+      @apply bg-blue/10 h-1.5 rounded-sm relative;
+      width: 350px;
+
+      span {
+        @apply absolute top-0 left-0 h-full bg-blue rounded-full;
+        width: 30%;
+      }
+    }
+  }
+
+  .configs {
+    .configsButtonContainer {
+      @apply absolute left-16 bottom-14 cursor-pointer;
+    }
+  }
+
+  .instructions {
+    .instructionsButtonContainer {
+      @apply absolute right-16 bottom-14 cursor-pointer;
+    }
+  }
+
+  @media only screen and (max-width: 920px) {
+    .controlButtonsContainer {
+      @apply bottom-4;
+
+      .buttonsContainer {
+        .playButtonContainer {
+          width: 50px;
+          height: 50px;
+        }
+
+        .prevNextButtonContainer {
+          @apply hidden;
+        }
+      }
+
+      .progressBarContainer {
+        @apply hidden;
+      }
+    }
+
+    .configs {
+      .configsButtonContainer {
+        @apply left-4 bottom-6;
+        width: 27px;
+      }
+    }
+
+    .instructions {
+      .instructionsButtonContainer {
+        @apply right-4 bottom-6;
+        width: 28px;
+      }
+    }
+  }
 }
