@@ -11,6 +11,7 @@ import sorting from "../../../public/images/sorting-image.png";
 import algorithmsHeaderBg from "../../../public/images/algorithms-header-bg.png";
 import aboutHeaderBg from "../../../public/images/about-header-bg.png";
 import dataStructuresHeaderBg from "../../../public/images/dataStrutures-header-bg.png";
+import character_1 from "../../../public/images/character-1.png";
 
 const IMAGES = {
   logo,
@@ -26,6 +27,7 @@ const IMAGES = {
   algorithmsHeaderBg,
   aboutHeaderBg,
   dataStructuresHeaderBg,
+  character_1,
 };
 
 export { IMAGES };
