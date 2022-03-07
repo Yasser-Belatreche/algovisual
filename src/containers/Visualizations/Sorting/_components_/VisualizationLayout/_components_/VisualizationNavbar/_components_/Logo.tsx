@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 // utils
-import { IMAGES } from "../../../../../../../../../utils/constants/Images";
+import { IMAGES } from "../../../../../../../../utils/constants/Images";
 
 // styles
-import styles from "../../../../../../Sorting.module.scss";
+import styles from "../../../../../Sorting.module.scss";
 
 const Logo: React.FC = () => {
   return (

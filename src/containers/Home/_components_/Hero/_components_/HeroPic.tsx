@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 // styles
-import styles from "../../../../Home.module.scss";
+import styles from "../../../Home.module.scss";
 
 // utils
-import { IMAGES } from "../../../../../../utils/constants/Images";
+import { IMAGES } from "../../../../../utils/constants/Images";
 
 const HeroPic: React.FC = () => {
   return (

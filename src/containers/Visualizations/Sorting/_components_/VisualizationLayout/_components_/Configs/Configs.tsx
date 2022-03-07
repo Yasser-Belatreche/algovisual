@@ -1,20 +1,25 @@
-import Image from "next/image";
-import React from "react";
-
-// utils
-import { ICONS } from "../../../../../../../utils/constants/Icons";
+import React, { useState } from "react";
+import classNames from "classnames/bind";
 
 // styles
 import styles from "../../../../Sorting.module.scss";
 
+// components
+import { ConfigsIcon } from "./_components_/ConfigsIcon";
+import { ConfigsPanel } from "./_components_/ConfigsPanel";
+
 interface Props {}
 
 const Configs: React.FC<Props> = () => {
+  const [isPanelOpen, setIsPanelOpen] = useState<boolean>(false);
+
   return (
     <div className={styles.configs}>
-      <div className={styles.configsButtonContainer}>
-        <Image src={ICONS.settings} alt="configs button" />
-      </div>
+      <ConfigsIcon onClick={() => setIsPanelOpen(true)} />
+      <ConfigsPanel
+        isOpen={isPanelOpen}
+        closePanel={() => setIsPanelOpen(false)}
+      />
     </div>
   );
 };

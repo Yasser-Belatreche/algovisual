@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 // styles
 import styles from "../../../../Sorting.module.scss";
 
 // components
-import { Logo } from "./_components_/Logo/Logo";
-import { Tags } from "./_components_/Tags/Tags";
-import { SeeCodeButton } from "./_components_/SeeCodeButton/SeeCodeButton";
+import { Logo } from "./_components_/Logo";
+import { Tags } from "./_components_/Tags";
+import { SeeCode } from "./_components_/SeeCode/SeeCode";
 
 interface Props {}
 
@@ -19,7 +19,7 @@ const VisualizationNavbar: React.FC<Props> = () => {
           <Tags />
         </div>
 
-        <SeeCodeButton />
+        <SeeCode />
       </div>
     </div>
   );
